@@ -5,6 +5,9 @@
  */
 package visao;
 
+import java.awt.Color;
+import javax.swing.BorderFactory;
+import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 import modelo.ProdutoVO;
 import servicos.ProdutoServicos;
@@ -54,12 +57,12 @@ public class UiCadProduto extends javax.swing.JInternalFrame {
         jlNomeErro = new javax.swing.JLabel();
         jlNumErro = new javax.swing.JLabel();
         jlPatErro = new javax.swing.JLabel();
-        jl = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
+        jlSetorErro = new javax.swing.JLabel();
+        jlDesccricoErro = new javax.swing.JLabel();
+        jlEstadoErro = new javax.swing.JLabel();
+        jlMarrcaErro = new javax.swing.JLabel();
+        jlModeloErro = new javax.swing.JLabel();
+        jlFabricanteErro = new javax.swing.JLabel();
         jLayeredPane2 = new javax.swing.JLayeredPane();
         jbCadastrar = new javax.swing.JButton();
         jbLimpar = new javax.swing.JButton();
@@ -89,23 +92,59 @@ public class UiCadProduto extends javax.swing.JInternalFrame {
 
         jlFabricante.setText("Fabricante");
 
-        jlNomeErro.setText("jLabel1");
+        jtNome.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                jtNomeFocusLost(evt);
+            }
+        });
 
-        jlNumErro.setText("jLabel2");
+        jtNumSerie.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                jtNumSerieFocusLost(evt);
+            }
+        });
 
-        jlPatErro.setText("jLabel3");
+        jtPatrimonio.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                jtPatrimonioFocusLost(evt);
+            }
+        });
 
-        jl.setText("jLabel4");
+        jtDescricao.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                jtDescricaoFocusLost(evt);
+            }
+        });
 
-        jLabel5.setText("jLabel5");
+        jtSetor.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                jtSetorFocusLost(evt);
+            }
+        });
 
-        jLabel6.setText("jLabel6");
+        jtEstadoFisico.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                jtEstadoFisicoFocusLost(evt);
+            }
+        });
 
-        jLabel7.setText("jLabel7");
+        jtMarca.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                jtMarcaFocusLost(evt);
+            }
+        });
 
-        jLabel8.setText("jLabel8");
+        jtFabricante.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                jtFabricanteFocusLost(evt);
+            }
+        });
 
-        jLabel9.setText("jLabel9");
+        jtModelo.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                jtModeloFocusLost(evt);
+            }
+        });
 
         javax.swing.GroupLayout jLayeredPane1Layout = new javax.swing.GroupLayout(jLayeredPane1);
         jLayeredPane1.setLayout(jLayeredPane1Layout);
@@ -120,33 +159,21 @@ public class UiCadProduto extends javax.swing.JInternalFrame {
                         .addComponent(jtNome, javax.swing.GroupLayout.PREFERRED_SIZE, 691, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jLayeredPane1Layout.createSequentialGroup()
                         .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(jLayeredPane1Layout.createSequentialGroup()
-                                    .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(jlNumSerie)
-                                        .addComponent(jlSetor)
-                                        .addComponent(jlDescricao))
-                                    .addGap(11, 11, 11)
-                                    .addComponent(jtDescricao, javax.swing.GroupLayout.PREFERRED_SIZE, 221, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGap(36, 36, 36)
-                                    .addComponent(jLabel5)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(jlMarca)
-                                        .addComponent(jlEstadoFisico)
-                                        .addComponent(jlModelo)
-                                        .addComponent(jlFabricante))
-                                    .addGap(29, 29, 29))
-                                .addGroup(jLayeredPane1Layout.createSequentialGroup()
-                                    .addComponent(jlPatrimonio)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                             .addGroup(jLayeredPane1Layout.createSequentialGroup()
-                                .addGap(106, 106, 106)
+                                .addComponent(jlPatrimonio)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addGroup(jLayeredPane1Layout.createSequentialGroup()
+                                .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jlDescricao)
+                                    .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(jlNumSerie, javax.swing.GroupLayout.Alignment.TRAILING)
+                                        .addComponent(jlSetor)))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(jLayeredPane1Layout.createSequentialGroup()
                                         .addComponent(jtSetor, javax.swing.GroupLayout.PREFERRED_SIZE, 221, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(jl))
+                                        .addComponent(jlSetorErro))
                                     .addGroup(jLayeredPane1Layout.createSequentialGroup()
                                         .addComponent(jtPatrimonio, javax.swing.GroupLayout.PREFERRED_SIZE, 221, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -154,23 +181,32 @@ public class UiCadProduto extends javax.swing.JInternalFrame {
                                     .addGroup(jLayeredPane1Layout.createSequentialGroup()
                                         .addComponent(jtNumSerie, javax.swing.GroupLayout.PREFERRED_SIZE, 221, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(jlNumErro)))
-                                .addGap(141, 141, 141)))
+                                        .addComponent(jlNumErro))
+                                    .addGroup(jLayeredPane1Layout.createSequentialGroup()
+                                        .addGap(5, 5, 5)
+                                        .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                            .addComponent(jtDescricao, javax.swing.GroupLayout.PREFERRED_SIZE, 221, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(jlDesccricoErro))))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jlMarca)
+                                    .addComponent(jlEstadoFisico)
+                                    .addComponent(jlFabricante)
+                                    .addComponent(jlModelo))
+                                .addGap(29, 29, 29)))
                         .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jtEstadoFisico)
                             .addComponent(jtMarca)
-                            .addGroup(jLayeredPane1Layout.createSequentialGroup()
-                                .addGap(9, 9, 9)
-                                .addComponent(jtFabricante))
-                            .addComponent(jtModelo, javax.swing.GroupLayout.PREFERRED_SIZE, 234, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(jtModelo, javax.swing.GroupLayout.PREFERRED_SIZE, 234, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jtFabricante))))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jlNomeErro)
-                    .addComponent(jLabel6)
-                    .addComponent(jLabel7)
+                    .addComponent(jlEstadoErro)
+                    .addComponent(jlMarrcaErro)
                     .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jLabel8, javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addComponent(jLabel9)))
+                        .addComponent(jlModeloErro, javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(jlFabricanteErro)))
                 .addContainerGap())
         );
         jLayeredPane1Layout.setVerticalGroup(
@@ -184,55 +220,56 @@ public class UiCadProduto extends javax.swing.JInternalFrame {
                 .addGap(29, 29, 29)
                 .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jLayeredPane1Layout.createSequentialGroup()
-                        .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jlNumSerie)
-                            .addComponent(jLabel6))
-                        .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jLayeredPane1Layout.createSequentialGroup()
-                                .addGap(39, 39, 39)
-                                .addComponent(jlPatrimonio))
-                            .addGroup(jLayeredPane1Layout.createSequentialGroup()
-                                .addGap(35, 35, 35)
-                                .addComponent(jLabel7))))
+                        .addComponent(jlEstadoErro)
+                        .addGap(71, 71, 71))
                     .addGroup(jLayeredPane1Layout.createSequentialGroup()
                         .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jtEstadoFisico, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jlEstadoFisico)
                             .addComponent(jtNumSerie, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jlNumErro))
+                            .addComponent(jlNumErro)
+                            .addComponent(jlNumSerie))
                         .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jLayeredPane1Layout.createSequentialGroup()
                                 .addGap(18, 18, 18)
                                 .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(jtMarca, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jlMarca)))
+                                    .addComponent(jlMarca)
+                                    .addComponent(jlMarrcaErro)))
                             .addGroup(jLayeredPane1Layout.createSequentialGroup()
                                 .addGap(28, 28, 28)
                                 .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(jtPatrimonio, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jlPatErro))))))
+                                    .addComponent(jlPatErro)
+                                    .addComponent(jlPatrimonio))))))
                 .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jLayeredPane1Layout.createSequentialGroup()
-                        .addGap(32, 32, 32)
-                        .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jlSetor)
-                            .addComponent(jtSetor, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jl)))
+                        .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jLayeredPane1Layout.createSequentialGroup()
+                                .addGap(9, 9, 9)
+                                .addComponent(jlModelo)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jlSetorErro))
+                            .addGroup(jLayeredPane1Layout.createSequentialGroup()
+                                .addGap(22, 22, 22)
+                                .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jlSetor)
+                                    .addComponent(jtSetor, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jLayeredPane1Layout.createSequentialGroup()
-                        .addGap(18, 18, 18)
-                        .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jtModelo, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jlModelo)
-                            .addComponent(jLabel8))
-                        .addGap(36, 36, 36)))
-                .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jlFabricante)
-                    .addComponent(jtFabricante, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jlDescricao)
-                    .addComponent(jtDescricao, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel5)
-                    .addComponent(jLabel9))
-                .addContainerGap(54, Short.MAX_VALUE))
+                            .addComponent(jlModeloErro))
+                        .addGap(17, 17, 17)))
+                .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jlFabricante)
+                        .addComponent(jtFabricante, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jlDescricao)
+                        .addComponent(jlDesccricoErro)
+                        .addComponent(jlFabricanteErro))
+                    .addComponent(jtDescricao, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(44, Short.MAX_VALUE))
         );
         jLayeredPane1.setLayer(jlNome, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jLayeredPane1.setLayer(jlNumSerie, javax.swing.JLayeredPane.DEFAULT_LAYER);
@@ -255,12 +292,12 @@ public class UiCadProduto extends javax.swing.JInternalFrame {
         jLayeredPane1.setLayer(jlNomeErro, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jLayeredPane1.setLayer(jlNumErro, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jLayeredPane1.setLayer(jlPatErro, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jLayeredPane1.setLayer(jl, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jLayeredPane1.setLayer(jLabel5, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jLayeredPane1.setLayer(jLabel6, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jLayeredPane1.setLayer(jLabel7, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jLayeredPane1.setLayer(jLabel8, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jLayeredPane1.setLayer(jLabel9, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane1.setLayer(jlSetorErro, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane1.setLayer(jlDesccricoErro, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane1.setLayer(jlEstadoErro, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane1.setLayer(jlMarrcaErro, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane1.setLayer(jlModeloErro, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane1.setLayer(jlFabricanteErro, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jLayeredPane2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
@@ -285,20 +322,18 @@ public class UiCadProduto extends javax.swing.JInternalFrame {
             .addGroup(jLayeredPane2Layout.createSequentialGroup()
                 .addGap(86, 86, 86)
                 .addComponent(jbCadastrar, javax.swing.GroupLayout.PREFERRED_SIZE, 216, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(112, 112, 112)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jbLimpar, javax.swing.GroupLayout.PREFERRED_SIZE, 234, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(145, 145, 145))
         );
         jLayeredPane2Layout.setVerticalGroup(
             jLayeredPane2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jLayeredPane2Layout.createSequentialGroup()
                 .addContainerGap(41, Short.MAX_VALUE)
-                .addComponent(jbCadastrar, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jLayeredPane2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jbCadastrar, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jbLimpar, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(34, 34, 34))
-            .addGroup(jLayeredPane2Layout.createSequentialGroup()
-                .addGap(32, 32, 32)
-                .addComponent(jbLimpar, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jLayeredPane2.setLayer(jbCadastrar, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jLayeredPane2.setLayer(jbLimpar, javax.swing.JLayeredPane.DEFAULT_LAYER);
@@ -321,7 +356,7 @@ public class UiCadProduto extends javax.swing.JInternalFrame {
                 .addComponent(jLayeredPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(27, 27, 27)
                 .addComponent(jLayeredPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(31, Short.MAX_VALUE))
+                .addContainerGap(48, Short.MAX_VALUE))
         );
 
         pack();
@@ -409,23 +444,148 @@ public class UiCadProduto extends javax.swing.JInternalFrame {
         limpar();
     }//GEN-LAST:event_jbLimparActionPerformed
 
+    private void jtNomeFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jtNomeFocusLost
+        if(jtNome.getText().isEmpty()){
+            jtNome.setBorder(
+                    BorderFactory.createLineBorder(Color.red));
+            jlNomeErro.setIcon(
+                new ImageIcon(getClass().getResource("/icones/exit.png")));
+        }else{
+            jtNome.setBorder(
+                    BorderFactory.createLineBorder(Color.gray));
+            jlNomeErro.setIcon(
+                new ImageIcon(getClass().getResource("/icones/accept.png")));
+        }
+    }//GEN-LAST:event_jtNomeFocusLost
+
+    private void jtNumSerieFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jtNumSerieFocusLost
+       if(jtNumSerie.getText().isEmpty()){
+            jtNumSerie.setBorder(
+                    BorderFactory.createLineBorder(Color.red));
+            jlNumErro.setIcon(
+                new ImageIcon(getClass().getResource("/icones/exit.png")));
+        }else{
+            jtNumSerie.setBorder(
+                    BorderFactory.createLineBorder(Color.gray));
+            jlNumErro.setIcon(
+                new ImageIcon(getClass().getResource("/icones/accept.png")));
+       }
+    }//GEN-LAST:event_jtNumSerieFocusLost
+
+    private void jtEstadoFisicoFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jtEstadoFisicoFocusLost
+        if(jtEstadoFisico.getText().isEmpty()){
+            jtEstadoFisico.setBorder(
+                    BorderFactory.createLineBorder(Color.red));
+            jlEstadoErro.setIcon(
+                new ImageIcon(getClass().getResource("/icones/exit.png")));
+        }else{
+            jtEstadoFisico.setBorder(
+                    BorderFactory.createLineBorder(Color.gray));
+            jlEstadoErro.setIcon(
+                new ImageIcon(getClass().getResource("/icones/accept.png")));
+        }
+    }//GEN-LAST:event_jtEstadoFisicoFocusLost
+
+    private void jtPatrimonioFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jtPatrimonioFocusLost
+        if(jtPatrimonio.getText().isEmpty()){
+            jtPatrimonio.setBorder(
+                    BorderFactory.createLineBorder(Color.red));
+            jlPatErro.setIcon(
+                new ImageIcon(getClass().getResource("/icones/exit.png")));
+        }else{
+            jtPatrimonio.setBorder(
+                    BorderFactory.createLineBorder(Color.gray));
+            jlPatErro.setIcon(
+                new ImageIcon(getClass().getResource("/icones/accept.png")));
+        }
+    }//GEN-LAST:event_jtPatrimonioFocusLost
+
+    private void jtMarcaFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jtMarcaFocusLost
+        if(jtMarca.getText().isEmpty()){
+            jtMarca.setBorder(
+                    BorderFactory.createLineBorder(Color.red));
+            jlMarrcaErro.setIcon(
+                new ImageIcon(getClass().getResource("/icones/exit.png")));
+        }else{
+            jtMarca.setBorder(
+                    BorderFactory.createLineBorder(Color.gray));
+            jlMarrcaErro.setIcon(
+                new ImageIcon(getClass().getResource("/icones/accept.png")));
+        }
+    }//GEN-LAST:event_jtMarcaFocusLost
+
+    private void jtSetorFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jtSetorFocusLost
+        if(jtSetor.getText().isEmpty()){
+            jtSetor.setBorder(
+                    BorderFactory.createLineBorder(Color.red));
+            jlSetorErro.setIcon(
+                new ImageIcon(getClass().getResource("/icones/exit.png")));
+        }else{
+            jtSetor.setBorder(
+                    BorderFactory.createLineBorder(Color.gray));
+            jlSetorErro.setIcon(
+                new ImageIcon(getClass().getResource("/icones/accept.png")));
+        }
+    }//GEN-LAST:event_jtSetorFocusLost
+
+    private void jtDescricaoFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jtDescricaoFocusLost
+        if(jtDescricao.getText().isEmpty()){
+            jtDescricao.setBorder(
+                    BorderFactory.createLineBorder(Color.red));
+            jlDesccricoErro.setIcon(
+                new ImageIcon(getClass().getResource("/icones/exit.png")));
+        }else{
+            jtDescricao.setBorder(
+                    BorderFactory.createLineBorder(Color.gray));
+            jlDesccricoErro.setIcon(
+                new ImageIcon(getClass().getResource("/icones/accept.png")));
+        }
+    }//GEN-LAST:event_jtDescricaoFocusLost
+
+    private void jtModeloFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jtModeloFocusLost
+        if(jtModelo.getText().isEmpty()){
+            jtModelo.setBorder(
+                    BorderFactory.createLineBorder(Color.red));
+            jlModeloErro.setIcon(
+                new ImageIcon(getClass().getResource("/icones/exit.png")));
+        }else{
+            jtModelo.setBorder(
+                    BorderFactory.createLineBorder(Color.gray));
+            jlModeloErro.setIcon(
+                new ImageIcon(getClass().getResource("/icones/accept.png")));
+        }
+    }//GEN-LAST:event_jtModeloFocusLost
+
+    private void jtFabricanteFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jtFabricanteFocusLost
+        if(jtFabricante.getText().isEmpty()){
+            jtFabricante.setBorder(
+                    BorderFactory.createLineBorder(Color.red));
+            jlFabricanteErro.setIcon(
+                new ImageIcon(getClass().getResource("/icones/exit.png")));
+        }else{
+            jtFabricante.setBorder(
+                    BorderFactory.createLineBorder(Color.gray));
+            jlFabricanteErro.setIcon(
+                new ImageIcon(getClass().getResource("/icones/accept.png")));
+        }
+    }//GEN-LAST:event_jtFabricanteFocusLost
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
     private javax.swing.JLayeredPane jLayeredPane1;
     private javax.swing.JLayeredPane jLayeredPane2;
     private javax.swing.JButton jbCadastrar;
     private javax.swing.JButton jbLimpar;
-    private javax.swing.JLabel jl;
+    private javax.swing.JLabel jlDesccricoErro;
     private javax.swing.JLabel jlDescricao;
+    private javax.swing.JLabel jlEstadoErro;
     private javax.swing.JLabel jlEstadoFisico;
     private javax.swing.JLabel jlFabricante;
+    private javax.swing.JLabel jlFabricanteErro;
     private javax.swing.JLabel jlMarca;
+    private javax.swing.JLabel jlMarrcaErro;
     private javax.swing.JLabel jlModelo;
+    private javax.swing.JLabel jlModeloErro;
     private javax.swing.JLabel jlNome;
     private javax.swing.JLabel jlNomeErro;
     private javax.swing.JLabel jlNumErro;
@@ -433,6 +593,7 @@ public class UiCadProduto extends javax.swing.JInternalFrame {
     private javax.swing.JLabel jlPatErro;
     private javax.swing.JLabel jlPatrimonio;
     private javax.swing.JLabel jlSetor;
+    private javax.swing.JLabel jlSetorErro;
     private javax.swing.JTextField jtDescricao;
     private javax.swing.JTextField jtEstadoFisico;
     private javax.swing.JTextField jtFabricante;

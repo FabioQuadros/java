@@ -142,11 +142,13 @@
                   <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="1" attributes="0">
                       <Component id="jlPatrimonioErro" alignment="1" min="-2" pref="30" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jtPatrimonio" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
-                          <Component id="jlPatrimonio" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jttecnologia" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="jltecErro" alignment="1" min="-2" pref="30" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="jtPatrimonio" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
+                              <Component id="jlPatrimonio" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jttecnologia" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
+                          </Group>
                       </Group>
                       <Component id="jlTecnologia" min="-2" max="-2" attributes="0"/>
                   </Group>

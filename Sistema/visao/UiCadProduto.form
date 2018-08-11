@@ -42,7 +42,7 @@
               <Component id="jLayeredPane1" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
               <Component id="jLayeredPane2" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="31" max="32767" attributes="0"/>
+              <EmptySpace pref="48" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -70,38 +70,24 @@
                       </Group>
                       <Group type="102" attributes="0">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" attributes="0">
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="jlNumSerie" min="-2" max="-2" attributes="0"/>
-                                          <Component id="jlSetor" alignment="0" min="-2" max="-2" attributes="0"/>
-                                          <Component id="jlDescricao" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      </Group>
-                                      <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
-                                      <Component id="jtDescricao" min="-2" pref="221" max="-2" attributes="0"/>
-                                      <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
-                                      <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace max="32767" attributes="0"/>
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="jlMarca" min="-2" max="-2" attributes="0"/>
-                                          <Component id="jlEstadoFisico" min="-2" max="-2" attributes="0"/>
-                                          <Component id="jlModelo" alignment="0" min="-2" max="-2" attributes="0"/>
-                                          <Component id="jlFabricante" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      </Group>
-                                      <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Component id="jlPatrimonio" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace max="32767" attributes="0"/>
-                                  </Group>
-                              </Group>
                               <Group type="102" alignment="0" attributes="0">
-                                  <EmptySpace min="-2" pref="106" max="-2" attributes="0"/>
+                                  <Component id="jlPatrimonio" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="32767" attributes="0"/>
+                              </Group>
+                              <Group type="102" attributes="0">
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="jlDescricao" min="-2" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="jlNumSerie" alignment="1" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jlSetor" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                                  <EmptySpace max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Group type="102" alignment="0" attributes="0">
                                           <Component id="jtSetor" min="-2" pref="221" max="-2" attributes="0"/>
                                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                          <Component id="jl" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jlSetorErro" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                       <Group type="102" alignment="0" attributes="0">
                                           <Component id="jtPatrimonio" min="-2" pref="221" max="-2" attributes="0"/>
@@ -113,29 +99,40 @@
                                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                           <Component id="jlNumErro" min="-2" max="-2" attributes="0"/>
                                       </Group>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <EmptySpace min="-2" pref="5" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="1" attributes="0">
+                                              <Component id="jtDescricao" min="-2" pref="221" max="-2" attributes="0"/>
+                                              <Component id="jlDesccricoErro" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                      </Group>
                                   </Group>
-                                  <EmptySpace min="-2" pref="141" max="-2" attributes="0"/>
+                                  <EmptySpace min="88" max="32767" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="jlMarca" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jlEstadoFisico" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jlFabricante" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jlModelo" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
                               <Component id="jtEstadoFisico" max="32767" attributes="0"/>
                               <Component id="jtMarca" max="32767" attributes="0"/>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <EmptySpace min="-2" pref="9" max="-2" attributes="0"/>
-                                  <Component id="jtFabricante" max="32767" attributes="0"/>
-                              </Group>
                               <Component id="jtModelo" min="-2" pref="234" max="-2" attributes="0"/>
+                              <Component id="jtFabricante" alignment="0" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                   </Group>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Component id="jlNomeErro" min="-2" max="-2" attributes="0"/>
-                      <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
-                      <Component id="jLabel7" min="-2" max="-2" attributes="0"/>
+                      <Component id="jlEstadoErro" min="-2" max="-2" attributes="0"/>
+                      <Component id="jlMarrcaErro" min="-2" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jLabel8" alignment="1" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabel9" min="-2" max="-2" attributes="0"/>
+                          <Component id="jlModeloErro" alignment="1" min="-2" max="-2" attributes="0"/>
+                          <Component id="jlFabricanteErro" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
@@ -154,20 +151,8 @@
                   <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="1" attributes="0">
                       <Group type="102" attributes="0">
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jlNumSerie" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel6" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" attributes="0">
-                                  <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
-                                  <Component id="jlPatrimonio" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
-                                  <Component id="jLabel7" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                          </Group>
+                          <Component id="jlEstadoErro" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="71" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" attributes="0">
                           <Group type="103" groupAlignment="3" attributes="0">
@@ -175,6 +160,7 @@
                               <Component id="jlEstadoFisico" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="jtNumSerie" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
                               <Component id="jlNumErro" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jlNumSerie" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" attributes="0">
@@ -182,6 +168,7 @@
                                   <Group type="103" groupAlignment="3" attributes="0">
                                       <Component id="jtMarca" alignment="3" min="-2" pref="36" max="-2" attributes="0"/>
                                       <Component id="jlMarca" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jlMarrcaErro" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
@@ -189,39 +176,50 @@
                                   <Group type="103" groupAlignment="3" attributes="0">
                                       <Component id="jtPatrimonio" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
                                       <Component id="jlPatErro" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jlPatrimonio" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                           </Group>
                       </Group>
                   </Group>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jlSetor" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jtSetor" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
-                              <Component id="jl" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Group type="102" attributes="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace min="-2" pref="9" max="-2" attributes="0"/>
+                                  <Component id="jlModelo" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="jlSetorErro" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="jlSetor" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jtSetor" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
                           </Group>
+                          <EmptySpace max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="1" attributes="0">
-                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jtModelo" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
-                              <Component id="jlModelo" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel8" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="jtModelo" min="-2" pref="35" max="-2" attributes="0"/>
+                              <Component id="jlModeloErro" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="17" max="-2" attributes="0"/>
                       </Group>
                   </Group>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jlFabricante" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jtFabricante" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
-                      <Component id="jlDescricao" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jtDescricao" alignment="3" min="-2" pref="33" max="-2" attributes="0"/>
-                      <Component id="jLabel5" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jLabel9" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="jlFabricante" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jtFabricante" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
+                          <Component id="jlDescricao" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jlDesccricoErro" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jlFabricanteErro" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <Component id="jtDescricao" alignment="0" min="-2" pref="33" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace pref="54" max="32767" attributes="0"/>
+                  <EmptySpace pref="44" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -273,67 +271,67 @@
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="jtNome">
+          <Events>
+            <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="jtNomeFocusLost"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JTextField" name="jtNumSerie">
+          <Events>
+            <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="jtNumSerieFocusLost"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JTextField" name="jtPatrimonio">
+          <Events>
+            <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="jtPatrimonioFocusLost"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JTextField" name="jtDescricao">
+          <Events>
+            <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="jtDescricaoFocusLost"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JTextField" name="jtSetor">
+          <Events>
+            <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="jtSetorFocusLost"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JTextField" name="jtEstadoFisico">
+          <Events>
+            <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="jtEstadoFisicoFocusLost"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JTextField" name="jtMarca">
+          <Events>
+            <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="jtMarcaFocusLost"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JTextField" name="jtFabricante">
+          <Events>
+            <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="jtFabricanteFocusLost"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JTextField" name="jtModelo">
+          <Events>
+            <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="jtModeloFocusLost"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="jlNomeErro">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="jLabel1"/>
-          </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jlNumErro">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="jLabel2"/>
-          </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jlPatErro">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="jLabel3"/>
-          </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jl">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="jLabel4"/>
-          </Properties>
+        <Component class="javax.swing.JLabel" name="jlSetorErro">
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel5">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="jLabel5"/>
-          </Properties>
+        <Component class="javax.swing.JLabel" name="jlDesccricoErro">
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel6">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="jLabel6"/>
-          </Properties>
+        <Component class="javax.swing.JLabel" name="jlEstadoErro">
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel7">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="jLabel7"/>
-          </Properties>
+        <Component class="javax.swing.JLabel" name="jlMarrcaErro">
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel8">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="jLabel8"/>
-          </Properties>
+        <Component class="javax.swing.JLabel" name="jlModeloErro">
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel9">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="jLabel9"/>
-          </Properties>
+        <Component class="javax.swing.JLabel" name="jlFabricanteErro">
         </Component>
       </SubComponents>
     </Container>
@@ -352,9 +350,9 @@
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="-2" pref="86" max="-2" attributes="0"/>
                   <Component id="jbCadastrar" min="-2" pref="216" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="112" max="-2" attributes="0"/>
-                  <Component id="jbLimpar" min="-2" pref="234" max="-2" attributes="0"/>
                   <EmptySpace max="32767" attributes="0"/>
+                  <Component id="jbLimpar" min="-2" pref="234" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="145" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -362,13 +360,11 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="1" attributes="0">
                   <EmptySpace pref="41" max="32767" attributes="0"/>
-                  <Component id="jbCadastrar" min="-2" pref="41" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="jbCadastrar" alignment="3" min="-2" pref="41" max="-2" attributes="0"/>
+                      <Component id="jbLimpar" alignment="3" min="-2" pref="41" max="-2" attributes="0"/>
+                  </Group>
                   <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
-              </Group>
-              <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
-                  <Component id="jbLimpar" min="-2" pref="41" max="-2" attributes="0"/>
-                  <EmptySpace max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
